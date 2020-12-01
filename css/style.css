@@ -1,0 +1,154 @@
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  line-height: 1.65;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #000;
+}
+body input, body textarea {
+  outline: none;
+  border-radius: 3px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-responsive.img-width {
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.container {
+  max-width: 1256px;
+  margin: 0 auto;
+}
+.flex{
+  display: flex;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-align-center{
+  align-items: center;
+}
+.flex-align-end{
+  align-items: flex-end;
+}
+.flex-justify-end{
+  justify-content: flex-end;
+}
+.flex-justify-between{
+  justify-content: space-between;
+}
+.button{
+  background-color: rgba(255,255,255,0);
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius:3000px; 
+  padding: 0px;
+  display: inline-block;
+  line-height: 1;
+  transition: all 0.3s;
+}
+.button:hover{
+  background-color: rgba(255,255,255,1);
+  color: #000;
+}
+.nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-weight: 300;
+}
+.nav__link{
+  padding: 32px 30px;
+  display: block;
+  text-decoration: none;
+  color:#fff;
+  position: relative;
+  font-size: 24px;
+}
+.nav__link span{
+  position: relative;
+  padding: 4px 0px;
+}
+.nav__link span::after{
+  content:"";
+  position: absolute;
+  bottom:0px;
+  left: 0px;
+  height: 3px;
+  width: 0px;
+  background-color:#fff;
+  transition: width 0.3s;
+}
+.nav__link:hover span::after{
+  width: 100%;
+}
+.nav__item:last-child .nav__link{
+  padding-right: 0px;
+}
+.logo{
+  font-weight: 900;
+  font-style: normal;
+  color: #fff;
+  font-size: 36px;
+  letter-spacing: 0.08em;
+}
+.offer{
+  min-height: 768px;
+  height: 100vh;
+  background-image: url("../img/bg.png");
+}
+.offer__flex{
+  height: 100%;
+}
+.offer__container{
+  color: #fff;
+  height: 100%;
+}
+.offer__content{
+  margin-bottom: 13%;
+  width: 80%;
+}
+.offer__title{
+  font-weight: 700;
+  font-size: 96px;
+  font-style: normal;
+  line-height: 112px;
+}
+.offer__description{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  width: 65%;
+}
+.offer__button{
+  padding:27px 98px;
+  font-weight: 300;
+  font-size: 24px;
+}
