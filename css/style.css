@@ -152,3 +152,31 @@ li {
   font-weight: 300;
   font-size: 24px;
 }
+.qualities{
+  max-width: 100%;
+}
+.qualities__flex{
+  max-height: 30%;
+}
+.qualities__container{
+  max-width: 100%;
+  margin: 5%;
+}
+.qualities__item{
+  padding: 3%;
+  position: relative;
+  display: block;
+  align-content: center;
+}
+.qualities__item:last-child{
+  margin-right: 10%;
+}
+.qualities__item:first-child{
+  margin-left: 10%;
+}
+.qualities__description{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+}
