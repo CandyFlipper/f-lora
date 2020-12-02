@@ -180,3 +180,40 @@ li {
   font-size: 24px;
   text-align: center;
 }
+.wedding{
+  max-width: 100%;
+  min-height: 30%;
+  height: 50vh;
+}
+.wedding__container{
+  background-image: url(../img/wedding.png);
+  max-width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.wedding__container:hover{
+  filter: drop-shadow(50px 50px 100px rgba(0,0,0,1));
+}
+.wedding__flex{
+  height: 100%;
+}
+.wedding__content{
+  margin: 11%;
+  width: 80%;
+  color: #fff;
+}
+.wedding__title{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 0px;
+}
+.wedding__description{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+}
+.wedding__link{
+  text-decoration: none;
+}
