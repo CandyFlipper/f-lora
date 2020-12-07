@@ -347,3 +347,138 @@ li {
   font-size: 24px;
   line-height: 28px;
 }
+.ucan{
+  background-color: #F5F9E2;
+}
+.ucan__container{
+  position: relative;
+  padding-bottom: 65px;
+  width: 100%;
+  margin-bottom: 65px;
+}
+.ucan__icon{
+  width: 72px;
+  margin-bottom: 20px;
+  display: block;
+}
+.ucan__noimagetext{
+  width: calc(100% - 93px);
+  margin-left: 21px;
+  margin-bottom: 20px;
+}
+.ucan__images{
+  width: 40%;
+  padding-top:20px;
+}
+.ucan__title{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 56px;
+}
+.ucan__text{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+}
+.howto{
+  background-color:#F5F9E2;
+}
+.howto__container{
+  position: relative;
+  padding-bottom: 65px;
+  width: 100%;
+  margin-bottom: 35px;
+}
+.howto__item{
+  background-color: #fff;
+  width: 32%;
+  align-content: center;
+  display: block;
+}
+.howto__icon{
+  height: 90px;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+.howto__title{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  padding-top: 65px;
+}
+.howto__description{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  padding: 48px;
+}
+.howto__asterisk{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  padding-top: 30px;
+}
+.contacts__container{
+  position: relative;
+  padding-bottom: 65px;
+  width: 100%;
+}
+.contacts__map{
+
+}
+.contacts__title{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+}
+.contacts__description{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+}
+.bottom{
+  background-color: #C0D0E8;
+}
+.bottom__title{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150.69%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.bottom__link{
+  text-decoration: none;
+  color: #000;
+}
+.bottom__text{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 15px;
+  margin-left: -26px;
+  margin-bottom: 25px;
+}
+.bottom__navtext{
+  margin-left: 0;
+}
+.bottom__noimagetext{
+  margin-left: 5px;
+}
+.bottom__contacts{
+  margin-left: 230px;
+  padding-bottom: 147px;
+}
+.bottom__icon{
+  height: 26px;
+}
