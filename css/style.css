@@ -209,17 +209,12 @@ li {
 }
 .wedding{
   max-width: 100%;
-  min-height: 30%;
-  height: 50vh;
+  background-image: url(../img/wedding.png);
+  background-size: cover;
 }
 .wedding__container{
-  background-image: url(../img/wedding.png);
   max-width: 100%;
   height: 100%;
-  transition: 0.3s;
-}
-.wedding__container:hover{
-  box-shadow: 0px 10px 50px rgba(0,0,0,0.5);
 }
 .wedding__flex{
   height: 100%;
@@ -243,6 +238,13 @@ li {
 }
 .wedding__link{
   text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.wedding__link:hover{
+  box-shadow: 0px 10px 50px rgba(0,0,0,0.5);
 }
 .fixedprice{
   max-width: 100%;
@@ -481,4 +483,361 @@ li {
 }
 .bottom__icon{
   height: 26px;
+}
+@media screen and (max-width: 1257px){
+  .container{
+    max-width: 1070px;
+  }
+  .offer__title {
+    font-size: 83px;
+    line-height: 100px;
+  }
+  .qualities__container::after{
+    width: 60%;
+  }
+  .qualities__container::before{
+    width: 60%;
+  }
+  .qualities__item{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .ucan {
+    margin-top: 50px;
+  }
+  .ucan__images{
+    width: 48%;
+  }
+}
+@media screen and (max-width: 1071px){
+  .container{
+    padding: 0px 15px;
+  }
+  .offer__content{
+    width: 90%;
+  }
+  .howto__description {
+    font-size: 20px;
+  }
+  .ucan__images{
+    display: none;
+  }
+}
+@media screen and (max-width: 961px){
+  .offer__content{
+    width: 100%;
+  }
+  .offer__title {
+    font-size: 64px;
+    line-height: 83px;
+  }
+  .offer__description {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .qualities__icon {
+    height: 70px;
+  }
+  .qualities__description {
+    font-size: 20px;
+  }
+  .wedding__title {
+    font-size: 62px;
+  }
+  .wedding__description {
+    font-size: 22px;
+  }
+  .ucan__title {
+    font-size: 39px;
+  }
+  .ucan__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .ucan__icon {
+    width: 51px;
+  }
+  .ucan__images{
+    display: none;
+  }
+  .categories__link-description {
+    font-size: 19px;
+  }
+  .howto__icon{
+    width: 80px;
+  }
+  .howto__description {
+    font-size: 16px;
+  }
+  .howto__asterisk {
+    font-size: 17px;
+  }
+  .contacts__title {
+    font-size: 40px;
+  }
+  .contacts__description {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 769px){
+  .offer {
+    min-height: initial;
+    background-size: cover;
+    background-position: center center;
+  }
+  .offer__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-shadow: 1px 1px 2px black;
+  }
+  .offer__description {
+    font-size: 18px;
+    line-height: 21px;
+    width: 100%;
+    text-shadow: 1px 1px 2px black;
+  }
+  .offer__button{
+    font-size: 13px;
+    line-height: 15px;
+    padding: 19px 68px;
+  }
+  .qualities__container::after{
+    width:0;
+    height: 0px;
+  }
+  .qualities__container::before{
+    width:0;
+    height: 0px;
+    padding: 0;
+  }
+  .qualities__flex{
+    flex-wrap: wrap;
+  }
+  .qualities__container{
+    margin: 0;
+    padding: 0;
+  }
+  .qualities__item{
+    width: calc(50%);
+    margin: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    justify-items: unset;
+    border: 1px solid #DCDCDC;
+  }
+  .qualities__description{
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .qualities__icon{
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+  }
+  .wedding{
+    height: 320px;
+    background-size: cover;
+    background-position: center center;
+  }
+  .wedding__title{
+    font-size: 36px;
+    line-height: 42px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .wedding__description{
+    font-size: 18px;
+    line-height: 21px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .fixedprice__container{
+    margin: 0;
+  }
+  .fixedprice__title{
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .fixedprice__flex{
+    flex-direction: column;
+  }
+  .fixedprice__link{
+    width: 100%;
+    height: 108px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: start;
+    padding-top: 30px;
+    padding-left: 30px;
+    margin: 0;
+  }
+  .fixedprice__item{
+    width: 100%;
+    height: 108px;
+    margin: 0;
+  }
+  .ucan__container{
+    margin: 0;
+  }
+  .ucan{
+    margin: 0;
+  }
+  .ucan__title{
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .ucan__images{
+    display: none;
+  }
+  .ucan__icon{
+    width: 33px;
+    height: 33px;
+  }
+  .ucan__noimagetext{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .ucan__text{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .categories__container{
+    margin-top: 0;
+    padding: 0;
+    height: 324px;
+  }
+  .categories__flex{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .categories__flexwrap{
+    flex-wrap: wrap;
+  }
+  .categories__link{
+    width: 100%;
+    height: 100%;
+  }
+  .categories__link-text{
+    font-size: 24px;
+    line-height: 28px;
+    text-align: start;
+    padding: 0px;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+  .categories__link-description{
+    display: none;
+  }
+  .categories__item--big{
+    width: 100%;
+    height: 108px;
+    margin: 0;
+  }
+  .categories__item--small{
+    width: 100%;
+    height: 108px;
+    margin: 0;
+  }
+  .categories__flex{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .categories__item{
+    width: 100%;
+    height: 108px;
+  }
+  .howto__container{
+    margin: 0;
+  }
+  .howto{
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+  .howto__title{
+    font-size: 18px;
+    line-height: 21px;
+    padding: 30px;
+    margin: 0;
+  }
+  .howto__flex{
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+  .howto__item{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 117px;
+    margin: 0;
+  }
+  .howto__item:first-child{
+    margin-bottom: 11px;
+  }
+  .howto__item:last-child{
+    margin-top: 11px;
+  }
+  .howto__description{
+    margin-top: 35px;
+    width: 202px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0;
+    padding-right: 20px;
+    text-align: start;
+    display: inline-block;
+  }
+  .howto__icon{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 38px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+  }
+  .howto__asterisk{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .contacts__container{
+    text-align: center;
+  }
+  .contacts__flex{
+    flex-direction: column;
+  }
+  .contacts__title{
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .contacts__description{
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .bottom__title{
+    font-size: 14px;
+    line-height: 150.69%;
+  }
+  .bottom__text{
+    font-size: 11px;
+    line-height: 83.69%;
+    margin-bottom: 21px;
+  }
+  .bottom__navtext{
+    font-size: 11px;
+    line-height: 83.69%;
+  }
+  .bottom__noimagetext{
+    font-size: 11px;
+    line-height: 83.69%;
+  }
+  .bottom__icon{
+    width: 14px;
+  }
+  .bottom__contacts{
+    margin-left: 44px;
+  }
 }
