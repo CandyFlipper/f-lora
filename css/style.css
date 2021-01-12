@@ -66,6 +66,10 @@ li {
 .flex-justify-between{
   justify-content: space-between;
 }
+.flex-justify-around{
+  justify-content: space-around;
+}
+
 .button{
   background-color: rgba(255,255,255,0);
   border: 1px solid #fff;
@@ -86,6 +90,8 @@ li {
   top: 0;
   left: 0;
   font-weight: 300;
+  z-index:3;
+  transition: all 0.2s;
 }
 .nav__link{
   padding: 32px 30px;
@@ -94,6 +100,7 @@ li {
   color:#fff;
   position: relative;
   font-size: 24px;
+  transition: all 0.2s;
 }
 .nav__link span{
   position: relative;
@@ -121,6 +128,16 @@ li {
   color: #fff;
   font-size: 36px;
   letter-spacing: 0.08em;
+  transition: all 0.2s;
+}
+.nav__scroll{
+  background-color: #fff;
+}
+.nav__scroll .nav__link, .nav__scroll .logo{
+  color: #000;
+}
+.nav__scroll .nav__link span::after{
+  background-color:#000;
 }
 .offer{
   min-height: 768px;
@@ -433,8 +450,12 @@ li {
   padding-bottom: 65px;
   width: 100%;
 }
+.contacts__text{
+  width: 35%;
+}
 .contacts__map{
-
+  width: 65%;
+  align-self:flex-end;
 }
 .contacts__title{
   font-style: normal;
@@ -483,6 +504,122 @@ li {
 }
 .bottom__icon{
   height: 26px;
+}
+.window{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.24);
+  top: 0%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.window.open{
+  opacity: 1;
+  visibility: visible;
+}
+.window__body{
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.window__content{
+  background-color: #fff;
+  max-width: 59.5%;
+  position: relative;
+  padding: 30px;
+}
+.window__flex{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.window__close{
+  background-color: #fff;
+  background-image: url(../img/x.png);
+  width: 36px;
+  height: 36px;
+  align-self: end;
+}
+.window__close--link{
+  align-self: end;
+}
+.window__title{
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+}
+.window__items{
+  background-color: #fff;
+  overflow: auto;
+  width: auto;
+  height: 550px;
+  align-items: flex-start;
+  margin: 30px;
+  padding: 10px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(0, 0, 0, 0.2);
+}
+.window__item{
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  background-color: rgb(189, 189, 189);
+  margin: 10px;
+}
+.nav__toggle{
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: initial;
+  border: none;
+}
+.nav__toggle span{
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  left: 0;
+  transition: 0.3s;
+}
+.nav__toggle span:nth-child(1){
+  top: 0;
+}
+.nav__toggle span:nth-child(2){
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav__toggle span:nth-child(3){
+  bottom: 0;
+}
+.nav__mobile{
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: #ffffff;
+  right: 0;
+}
+.nav__mobile .nav__link {
+  padding: 5px 30px;
+}
+.nav__mobile--active{
+  display: block;
+}
+.nav__toggle--active span:nth-child(2){
+  display: none;
+}
+.nav__toggle--active span:nth-child(1){
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+}
+.nav__toggle--active span:nth-child(3){
+  top: 50%;
+  transform: rotate(-45deg) translateY(-50%);
+  bottom: initial;
 }
 @media screen and (max-width: 1257px){
   .container{
@@ -583,6 +720,21 @@ li {
   }
 }
 @media screen and (max-width: 769px){
+  .nav{
+    background-color: #fff;
+  }
+  .nav .nav__link, .nav .logo{
+    color: #000;
+  }
+  .nav .nav__link span::after{
+    background-color:#000;
+  }
+  .nav__desktop{
+    display: none;
+  }
+  .nav__toggle{
+    display: block;
+  }
   .offer {
     min-height: initial;
     background-size: cover;
@@ -803,6 +955,12 @@ li {
     font-size: 12px;
     line-height: 14px;
   }
+  .contacts__text{
+    width: 100%;
+  }
+  .contacts__map{
+    width: 100%;
+  }
   .contacts__container{
     text-align: center;
   }
@@ -840,4 +998,285 @@ li {
   .bottom__contacts{
     margin-left: 44px;
   }
+}
+
+
+
+
+
+/**************************
+  Basic Modal Styles
+**************************/
+
+.modal {
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:10;
+}
+
+.modal__container {
+  background-color: transparent;
+  padding: 0px;
+  max-width: 1057px;
+  height: 75vh;
+  width: 72%;
+  border-radius: 0px;
+  box-sizing: border-box;
+}
+
+.modal__header {
+  position: relative;
+  display: block;
+  height: 30px;
+  margin-bottom: 0px;
+  padding: 30px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background: #D3D3D3;
+}
+
+@supports (display: flex) {
+	
+	.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	  height:initial;
+	}
+	
+}
+
+.modal__title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #00449e;
+  box-sizing: border-box;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+}
+
+@supports (display: flex) {
+	
+  .modal__title {
+	  position: static;
+  }
+	
+  .modal__close {
+	  position: static;
+  }
+  
+}
+
+.modal__header .modal__close:before { content: "\2715"; }
+
+.modal-content-content{
+  padding: 30px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: #fff;
+  height: 90%;
+  overflow: auto;
+}
+
+.modal__content {
+  margin: 0px 0px 20px 0px;
+  color: rgba(0,0,0,.8);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modal__content p {
+  margin-top: 0px;
+}
+
+.modal__btn {
+  font-size: .875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #e6e6e6;
+  color: rgba(0,0,0,.8);
+  border-radius: .25rem;
+  border-style: none;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  line-height: 1.15;
+  margin: 0;
+  will-change: transform;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: -webkit-transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out,-webkit-transform .25s ease-out;
+}
+
+.modal__btn-primary {
+  background-color: #00449e;
+  color: #fff;
+}
+
+/**************************
+  Demo Animation Style
+**************************/
+
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+
+/**************************
+  Custom styles for individual modals
+**************************/
+
+.modal__container button {
+	outline: none;
+	cursor: pointer !important;
+}
+
+.modal__container h2.modal__title {
+	color: #595959;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #00449e;
+  box-sizing: border-box;
+}
+
+.modal__close {
+  font-size: 24px;
+}
+
+.modal__content {
+  color: rgba(0,0,0,.8);
+}
+
+.modal__btn {
+  padding: 10px 15px;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  -webkit-appearance: none;
+}
+
+/**************************
+  Mobile custom styles for individual modals
+**************************/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	
+	.modal__container {
+	  width: 90% !important;
+	  min-width: 90% !important;
+	}
+	
+	@supports (display: flex) {
+	
+		.modal__container {
+			width: 90% !important;
+			min-width: 90% !important;
+      height: 85vh;
+		}
+		
+	}
+  
+  .modal__header {
+    padding: 20px;
+  }
+  
+  .modal-content-content {
+    padding: 20px;
+  }
+  
+  .modal__content {
+    -webkit-overflow-scrolling: touch;
+  }
+  
 }

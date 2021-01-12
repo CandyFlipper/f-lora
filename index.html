@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Салон цветов F'Lora</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
@@ -15,8 +15,48 @@
                 <div class="logo">
                     F'LORA
                 </div>
-                <nav class="nav__container">
+                <button class="nav__toggle">
+                    <span>
+
+                    </span>
+                    <span>
+                        
+                    </span>
+                    <span>
+                        
+                    </span>
+                </button>
+                <nav class="nav__container nav__desktop">
                     <ul class="nav__list flex flex-justify-end">
+                        <li class="nav__item">
+                            <a href="#offer" class="nav__link">
+                                <span>Главная</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#qualities" class="nav__link">
+                                <span>О нас</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#wedding" class="nav__link">
+                                <span>Каталог</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#howto" class="nav__link">
+                                <span>Как заказать</span>
+                                </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#insta" class="nav__link">
+                                <span>Галлерея</span>
+                                </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="nav__container nav__mobile">
+                    <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#offer" class="nav__link">
                                 <span>Главная</span>
@@ -57,7 +97,7 @@
                     <p class="offer__description">
                         Индивидуальные букеты за вашу цену с вашими предпочтениями
                     </p>
-                    <button class="offer__button button">
+                    <button href="#howto" class="offer__button button">
                         Заказать
                     </button>
                 </div>
@@ -103,7 +143,7 @@
             </div>
     </section>
     <section class="wedding" id="wedding">
-            <a href="#" class="wedding__link">
+            <a class="wedding__link" data-micromodal-trigger="modal-1">
                 <div class="container wedding__container">
                     <div class="flex wedding__flex flex-justify-s">
                         <div class="wedding__content">
@@ -124,18 +164,18 @@
         </h2>
         <div class="container fixedprice__container">
             <div class="flex flex-row fixedprice__flex flex-justify-between">
-                <div class="fixedprice__item">
-                    <a href="" class="fixedprice__link">
+                <div class="fixedprice__item" data-micromodal-trigger="modal-2">
+                    <a class="fixedprice__link">
                         500 руб
                     </a>
                 </div>
-                <div class="fixedprice__item">
-                    <a href="" class="fixedprice__link">
+                <div class="fixedprice__item" data-micromodal-trigger="modal-3">
+                    <a class="fixedprice__link">
                         1000 руб
                     </a>
                 </div>
-                <div class="fixedprice__item">
-                    <a href="" class="fixedprice__link">
+                <div class="fixedprice__item" data-micromodal-trigger="modal-4">
+                    <a class="fixedprice__link">
                         2500 руб
                     </a>
                 </div>
@@ -188,8 +228,8 @@
     <section class="categories">
         <div class="container categories__container">
             <div class="flex categories__flexwrap">
-                <div class="categories__item--big">
-                    <a href="" class="categories__link">
+                <div class="categories__item--big" data-micromodal-trigger="modal-5">
+                    <a class="categories__link">
                         <div class="categories__link-text">
                             Композиции
                             <p class="categories__link-description">
@@ -200,15 +240,15 @@
                 </div>
                 <div class="categories__item">
                     <div class="categories__flex">
-                        <div class="categories__item--small">
-                            <a href="" class="categories__link">
+                        <div class="categories__item--small" data-micromodal-trigger="modal-6">
+                            <a class="categories__link">
                                 <div class="categories__link-text">
                                     Игрушки
                                 </div>
                             </a>
                         </div>
-                    <div class="categories__item--small">
-                        <a href="" class="categories__link">
+                    <div class="categories__item--small" data-micromodal-trigger="modal-7">
+                        <a class="categories__link">
                             <div class="categories__link-text">
                                 Оформление <br>банкетов
                             </div>
@@ -280,7 +320,7 @@
                     </p>
                 </div>
                 <div class="contacts__map">
-
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A40f92dad9a2852cbc2296b6950b159b1e50716572ea3d90b080c2e29423f1477&amp;source=constructor" width="100%" height="435" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -344,5 +384,371 @@
             </div>
         </div>
     </section>
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div id="modal-container" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header id="modal-header" class="modal__header window__title">
+              <h2 class="modal__title">
+                Примеры свадебных букетов
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <div id="modal-content-content" class="modal-content-content">
+              <div id="modal-content" class="modal__content">
+                <div class="flex window__flex flex-row">
+                    <div class="window__item">
+    
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div id="modal-container" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header id="modal-header" class="modal__header window__title">
+              <h2 class="modal__title">
+                За 500 руб.
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <div id="modal-content-content" class="modal-content-content">
+              <div id="modal-content" class="modal__content">
+                <div class="flex window__flex flex-row">
+                    <div class="window__item">
+    
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div id="modal-container" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header id="modal-header" class="modal__header window__title">
+              <h2 class="modal__title">
+                За 1000 руб.
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <div id="modal-content-content" class="modal-content-content">
+              <div id="modal-content" class="modal__content">
+                <div class="flex window__flex flex-row">
+                    <div class="window__item">
+    
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal micromodal-slide" id="modal-4" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div id="modal-container" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header id="modal-header" class="modal__header window__title">
+              <h2 class="modal__title">
+                За 2500 руб.
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <div id="modal-content-content" class="modal-content-content">
+              <div id="modal-content" class="modal__content">
+                <div class="flex window__flex flex-row">
+                    <div class="window__item">
+    
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal micromodal-slide" id="modal-5" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div id="modal-container" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header id="modal-header" class="modal__header window__title">
+              <h2 class="modal__title">
+                Композиции
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <div id="modal-content-content" class="modal-content-content">
+              <div id="modal-content" class="modal__content">
+                <div class="flex window__flex flex-row">
+                    <div class="window__item">
+    
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal micromodal-slide" id="modal-6" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div id="modal-container" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header id="modal-header" class="modal__header window__title">
+              <h2 class="modal__title">
+                Игрушки
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <div id="modal-content-content" class="modal-content-content">
+              <div id="modal-content" class="modal__content">
+                <div class="flex window__flex flex-row">
+                    <div class="window__item">
+    
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal micromodal-slide" id="modal-7" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div id="modal-container" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header id="modal-header" class="modal__header window__title">
+              <h2 class="modal__title">
+                Оформление Банкетов
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <div id="modal-content-content" class="modal-content-content">
+              <div id="modal-content" class="modal__content">
+                <div class="flex window__flex flex-row">
+                    <div class="window__item">
+    
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                    <div class="window__item">
+                        
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
