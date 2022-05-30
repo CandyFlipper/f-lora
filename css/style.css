@@ -47,6 +47,9 @@ li {
 .flex{
   display: flex;
 }
+.flex-wrap{
+  flex-wrap: wrap;
+}
 .flex-row{
   margin-right: -14.5px;
   margin-left: -14.5px;
@@ -445,6 +448,31 @@ li {
   line-height: 28px;
   padding-top: 30px;
 }
+.insta__title{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  padding-top: 65px;
+  text-decoration: none;
+}
+.insta__link{
+  text-decoration: none;
+  color: #000;
+}
+.insta__item{
+  width: 290px;
+  height: 290px;
+}
+.insta__item-img{
+  width: 290px;
+  height: 290px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  padding-bottom: 25px;
+}
 .contacts__container{
   position: relative;
   padding-bottom: 65px;
@@ -621,6 +649,80 @@ li {
   transform: rotate(-45deg) translateY(-50%);
   bottom: initial;
 }
+
+
+.transparent {
+   position: relative;
+   max-width: 700px;
+   padding: 60px 50px;
+   margin: 50px auto 5%;
+   background-color: rgb(218, 236, 220);
+   background-size: cover;
+   border-radius: 20px;
+}
+.transparent:before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   
+}
+.form-inner {
+   position: relative;
+}
+.form-inner h3 {
+   position: relative;
+   margin-top: 0;
+   color: rgb(0, 0, 0);
+   font-weight: 300;
+   font-size: 26px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.form-inner label {
+   display: block;
+   padding-left: 15px;
+   color: rgba(0, 0, 0, 0.8);
+   text-transform: uppercase;
+   font-size: 20px;
+}
+.form-inner input {
+   display: block;
+   width: 100%;
+   padding: 0 15px;
+   margin: 10px 0 15px;
+   border-width: 0;
+   line-height: 40px;
+   border-radius: 20px;
+   color: rgb(0, 0, 0);
+   background: rgb(255, 255, 255);
+   font-size: 14px;
+}
+.form-inner input[type="submit"] {
+   background: #ffffff;
+   transition: 0.2s;
+   font-size: 17px;
+   box-shadow: none;
+}
+.form-inner input[type="submit"]:hover {
+  box-shadow: 0px 2px 15px rgba(56, 56, 56, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1257px){
   .container{
     max-width: 1070px;
